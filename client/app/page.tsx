@@ -1,10 +1,9 @@
-"use client";
+"use client"
+import { Button } from "@/components/ui/button"
+import { Spinner } from "@/components/ui/spinner"
+import { authClient } from "@/lib/auth-client"
+import { useRouter } from "next/navigation"
 
-import { Button } from "@/components/ui/button";
-import { Spinner } from "@/components/ui/spinner";
-import { authClient } from "@/lib/auth-client";
-
-import { useRouter } from "next/navigation";
 
 export default function Home() {
   const {data, isPending} = authClient.useSession()
